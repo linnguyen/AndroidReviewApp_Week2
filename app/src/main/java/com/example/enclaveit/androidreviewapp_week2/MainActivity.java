@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvTopic;
     TextView tvTopic;
     ArrayAdapter<String> arrayAdapter;
-    String [] arrTopic = {"Gallary using adapter", "media", "sqlite ", "dx", "Music Streaming App"};
+    String [] arrTopic = {"Gallary using adapter", "media", "Music Streaming App", "sqlite "};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(MainActivity.this, MediaPlayer.class);
                         startActivity(intent);
                         break;
-
+                    case 2:
+                        intent = new Intent(MainActivity.this, MediaPlayerApp.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
