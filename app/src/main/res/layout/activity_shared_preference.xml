@@ -12,12 +12,14 @@
     tools:context="com.example.enclaveit.androidreviewapp_week2.model.SharedPreference">
 
     <TextView
-        android:text="TextView"
+        android:text="What the fuck!"
+        android:textSize="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/txtFont" />
 
     <ListView
+        android:id="@+id/lvFont"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
