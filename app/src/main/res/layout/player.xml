@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4A4A4A">
+   <!-- Player header -->
+    <LinearLayout
+        android:id="@+id/play_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+        <!--Song Title-->
+        <TextView
+            android:text="The Good, The Bad And The Ugly"
+            android:id="@+id/songTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#04b3d2"
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+        <!--Playlist button -->
+        <ImageButton
+            android:id="@+id/btnPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/btn_playlist"/>
+    </LinearLayout>
+    <!-- Song thumbnail image -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_below="@id/play_header">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/adele"/>
+    </LinearLayout>
+    <!--Player footer -->
+    <LinearLayout
+        android:id="@+id/player_footer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_player_footer"
+        android:gravity="center"
+        >
+        <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+              android:background="@drawable/rounded_corner"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp">
+            <!-- Previos Button -->
+          <ImageButton
+              android:id="@+id/btnPrevious"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/btn_previous"
+              android:background="@null"
+              />
+            <!-- Backward button -->
+            <ImageButton
+                android:id="@+id/btnBackward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_backward"
+                android:background="@null"/>
+            <!--Play button -->
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_play"
+                android:background="@null"/>
+            <!-- Forward button -->
+            <ImageButton
+                android:id="@+id/btnFordward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_forward"
+                android:background="@null"/>
+            <!-- Next button -->
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_next"
+                android:background="@null"/>
+       </LinearLayout>
+    </LinearLayout>
+    <!-- Progress Bar/ Seek bar -->
+    <SeekBar
+        android:id="@+id/songProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@id/player_footer"
+        android:thumb="@drawable/seek_handler"
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        />
+
+</RelativeLayout>

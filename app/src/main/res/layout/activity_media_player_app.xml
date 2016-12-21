@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.enclaveit.androidreviewapp_week2.MediaPlayerApp">
+    tools:context="com.example.enclaveit.androidreviewapp_week2.app.MediaPlayerApp">
 
     <ListView
         android:id="@+id/song_list"

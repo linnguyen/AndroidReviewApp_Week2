@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.example.enclaveit.androidreviewapp_week2.app.MediaPlayerApp;
+import com.example.enclaveit.androidreviewapp_week2.app.PlayListActivity;
 
 public class MainActivity extends AppCompatActivity {
     Intent intent;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(MainActivity.this, MediaPlayerApp.class);
+                        intent = new Intent(MainActivity.this, PlayListActivity.class);
                         startActivity(intent);
                         break;
                 }
