@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvTopic;
     TextView tvTopic;
     ArrayAdapter<String> arrayAdapter;
-    String [] arrTopic = {"Gallary using adapter", "media", "Music Streaming App","SharedPreferences","sqlite "};
+    String [] arrTopic = {"Gallary using adapter", "Media", "AlertDialog",  "Music Streaming App", "SharedPreferences", "Sqlite "};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -25,7 +25,8 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity android:name=".app.PlayListActivity" />
-        <activity android:name=".SharedPreference"></activity>
+        <activity android:name=".SharedPreference" />
+        <activity android:name=".AlertDiolog"></activity>
     </application>
 
 </manifest>

@@ -1,9 +1,12 @@
 package com.example.enclaveit.androidreviewapp_week2.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,49 +15,42 @@ import com.example.enclaveit.androidreviewapp_week2.R;
 import com.example.enclaveit.androidreviewapp_week2.model.Song;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by enclaveit on 20/12/2016.
  */
 
-public class SongAdapter extends BaseAdapter {
-    private ArrayList<Song> songs;
-    private LayoutInflater songInf;
-
-    public SongAdapter(Context c, ArrayList<Song> songs) {
-        this.songs = songs;
-        this.songInf = LayoutInflater.from(c);
+public class SongAdapter extends ArrayAdapter {
+   Activity context;
+    int resource;
+    List<String> listSongs;
+    /**
+     * Constructor
+     *
+     * @param context  The current context.
+     * @param resource The resource ID for a layout file containing a TextView to use when
+     *                 instantiating views.
+     * @param objects  The objects to represent in the ListView.
+     */
+    public SongAdapter(Activity context, int resource, List objects) {
+        super(context, resource, objects);
+        this.resource = resource;
+        this.listSongs = objects;
+        this.context = context;
     }
 
+    @NonNull
     @Override
-    public int getCount() {
-        return songs.size();
-    }
+    public View getView(int position, View convertView, ViewGroup parent) {
+        LayoutInflater inflater = this.context.getLayoutInflater();
+        View row = inflater.inflate(this.resource, null);
+        //reference to song title
+        TextView txtsongTitle = (TextView) row.findViewById(R.id.songTitle);
+        // get title song from list song
+        final String songTitle = this.listSongs.get(position);
+        txtsongTitle.setText(songTitle);
 
-    @Override
-    public Object getItem(int i) {
-        return null;
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        //map to song layout
-        LinearLayout songLay = (LinearLayout) songInf.inflate(R.layout.song, viewGroup, false);
-       // get title and artist news
-        TextView songView = (TextView) songLay.findViewById(R.id.song_title);
-        TextView artistView = (TextView) songLay.findViewById(R.id.song_artist);
-        //get song using position
-        Song curSong = songs.get(i);
-        //get title and artist strings
-        songView.setText(curSong.getTitle());
-        artistView.setText(curSong.getArtist());
-
-        songLay.setTag(i);
-        return songLay;
+        return row;
     }
 }

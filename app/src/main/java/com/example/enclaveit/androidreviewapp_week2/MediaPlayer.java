@@ -20,7 +20,7 @@ public class MediaPlayer extends Activity {
             Song = android.media.MediaPlayer.create(this, R.raw.uocmongotngao);
             Song.start();
         } else if (!Song.isPlaying()) {
-           Song.seekTo(pause);
+            Song.seekTo(pause);
             Song.start();
         }
     }

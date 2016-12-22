@@ -13,7 +13,6 @@
         android:paddingRight="5dp">
         <!--Song Title-->
         <TextView
-            android:text="The Good, The Bad And The Ugly"
             android:id="@+id/songTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,11 +24,12 @@
             android:layout_marginTop="10dp"
             />
         <!--Playlist button -->
-        <ImageButton
-            android:id="@+id/btnPlaylist"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/btn_playlist"/>
+         <ImageButton
+                android:id="@+id/btnPlaylist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/btn_playlist"
+                android:background="@null"/>
     </LinearLayout>
     <!-- Song thumbnail image -->
     <LinearLayout
@@ -58,23 +58,22 @@
               android:layout_height="wrap_content"
               android:orientation="horizontal"
               android:gravity="center_vertical"
-              android:background="@drawable/rounded_corner"
-              android:paddingLeft="10dp"
-              android:paddingRight="10dp">
+              android:background="@drawable/rounded_corner">
             <!-- Previos Button -->
-          <ImageButton
+            <ImageButton
               android:id="@+id/btnPrevious"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:src="@drawable/btn_previous"
-              android:background="@null"
-              />
+              android:scaleType="fitXY"
+              android:background="@null" />
             <!-- Backward button -->
             <ImageButton
                 android:id="@+id/btnBackward"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:src="@drawable/btn_backward"
+                android:scaleType="fitXY"
                 android:background="@null"/>
             <!--Play button -->
             <ImageButton
@@ -89,6 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/btn_forward"
+                android:scaleType="fitXY"
                 android:background="@null"/>
             <!-- Next button -->
             <ImageButton
@@ -96,6 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/btn_next"
+                android:scaleType="fitXY"
                 android:background="@null"/>
        </LinearLayout>
     </LinearLayout>
