@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvTopic;
     TextView tvTopic;
     ArrayAdapter<String> arrayAdapter;
-    String [] arrTopic = {"Gallary using adapter", "media", "Music Streaming App", "sqlite "};
+    String [] arrTopic = {"Gallary using adapter", "media", "Music Streaming App","SharedPreferences","sqlite "};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         intent = new Intent(MainActivity.this, PlayListActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+                        intent = new Intent(MainActivity.this, SharedPreference.class);
                         startActivity(intent);
                         break;
                 }
