@@ -1,5 +1,6 @@
 package com.example.enclaveit.androidreviewapp_week2;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ListView lvTopic;
     TextView tvTopic;
     ArrayAdapter<String> arrayAdapter;
-    String [] arrTopic = {"Gallary using adapter", "Media", "AlertDialog",  "Music Streaming App", "SharedPreferences", "Sqlite "};
+    String [] arrTopic = {"Gallary using adapter", "Media", "SharedPreferences","AlertDialog", "Sqlite ", "Music Streaming App"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +42,15 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(MainActivity.this, PlayListActivity.class);
+                        intent = new Intent(MainActivity.this, SharedPreference.class);
                         startActivity(intent);
                         break;
                     case 3:
-                        intent = new Intent(MainActivity.this, SharedPreference.class);
+                        intent = new Intent(MainActivity.this, AlertDialog.class);
+                        startActivity(intent);
+                        break;
+                    case 4:
+                        intent = new Intent(MainActivity.this, PlayListActivity.class);
                         startActivity(intent);
                         break;
                 }
